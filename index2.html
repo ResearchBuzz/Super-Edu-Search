@@ -1,0 +1,543 @@
+ <!DOCTYPE html>
+<!-- Template by html.am -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>ResearchBuzz Search Gizmos: Super Edu Search - Search by Zip/Radius</title>
+		<style type="text/css">
+			html, #page { padding:0; margin:0;}
+			body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;} 
+			h1, h2, h3, h4, h5, h6 {color:darkblue;}
+			#page { background:#fff;}
+			#header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+						
+			/* Logo */
+			#logo { padding:0; width:auto; float:left;}
+			#logo h1 a, h1 a:hover { color:darkblue; text-decoration:none;}
+			#logo h1 span { color:#24592c;}
+
+			/* Header */
+			#header { background:#fff; }
+			#header-inner { margin:0 auto; padding:0; width:970px;}
+			
+			/* Feature */
+			.feature { background:blue;padding:18px;}
+			.feature-inner { margin:auto;width:970px; }
+			.feature-inner h1 {color:#E9E9FC;font-size:32px;}
+			
+			/* Menu */
+			#top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+			#top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+			#top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+			#top-nav ul li a { display:block; margin:0; padding:8px 20px; color:blue; text-decoration:none;}
+			#top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+			
+			/* Content */
+			#content-inner { margin:0 auto; padding:10px 0; width:970px;background:#fff;}
+			#content #contentbar { margin:0; padding:0; float:right; width:760px;}
+			#content #contentbar .article {  font-size: 1.25em; color: black; margin:0 0 24px; padding:0 20px 0 15px; }
+			#content #sidebar { background-color:#ECFFDC; padding:0; float:left; width:200px;}
+			#content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+			#content #sidebar .widget h3 a { text-decoration:none;}
+			#content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+			#content #sidebar .widget ul li { margin:0;}
+			#content #sidebar .widget ul li { padding:4px 0; width:185px;}
+			#content #sidebar .widget ul li a {font-size: 1.25em; color:black; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+			#content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+			
+			/* Footerblurb */
+			#footerblurb { background:#d3d3f9;color:blue;}
+			#footerblurb-inner { margin:0 auto; width:922px; padding:24px;}
+			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+			
+			/* Footer */
+			#footer { background:#fff;}
+			#footer-inner { margin:auto; text-align:center; padding:12px; width:922px;}
+			#footer a {color:blue;text-decoration:none;}
+			
+			/* Clear both sides to assist with div alignment  */
+			.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+		</style>
+		
+
+	</head>
+	<body>
+		<div id="page">
+			<header id="header">
+				<div id="header-inner">	
+					<div id="logo">
+						<h1><a href="#">ResearchBuzz<span>Search Gizmos</span></a></h1>
+					</div>
+					<div id="top-nav">
+						<ul>
+						<li><a href="https://github.com/ResearchBuzz">ResearchBuzz GitHub Home</a></li>
+						<li><a href="https://www.researchbuzz.me">ResearchBuzz Main Site</a></li>
+						<li><a href="https://www.rbfirehose.com">ResearchBuzz Firehose</a></li>
+						</ul>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</header>
+			<div class="feature">
+				<div class="feature-inner">
+				<h1>Super Edu Search - Search by Zip/Radius </h1>
+				</div>
+			</div>
+		
+	
+			<div id="content">
+				<div id="content-inner">
+				
+					<main id="contentbar">
+						<div class="article">
+		
+
+<div id="results">
+
+</div>
+
+
+<h2>site:edu is great. But what if you could get even more specific?</h2>
+
+<h3>Super Edu Search takes higher education institution information from the Department of Education and applies it to a Google search. Did you ever want to search the Web space of all the public universities in Indiana? Or all the HBCUs in the country? Or maybe all the Baptist institutions in Texas? Now you can.</h3>
+
+<h4><b>Things you should know</b>: Super Edu Search limits you to 200 results. That will get you all the universities in a single state for most states - the exceptions are Texas, Florida, and California. And even in those states, if you limit your search by ownership (public universities, for example) you'll be under the 200-item limit.<br>
+<br> Google has a query limit of 32 words, so queries that return more than 15 results will be divided into multiple search URLs.</h4>
+
+<i><text size="large"><label><b>Query:</b></label></text></i>
+  <input type="text" class="searchq" value="agriculture"><br><br>
+
+<i><text size="large"><label><b>Zip Code</b></label></text></i>
+  <input type="text" class="zip" value="90210"><br><br>
+
+<label><b>Search Radius</b> (miles, max 100)</label>:
+      <input type="number" class="searchradius" min="1" max="100" value="1"> </label><br><br>
+
+<label for="ownership"><b>Choose Ownership Type</b></label>
+<select name="ownership" class="ownership">
+<option value="0">Any Ownership Type</option>
+<option value="1">Public</option>
+<option value="2">Private, NonProfit</option>
+<option value="3">Private, For-Profit</option>
+</select><br><br>
+
+<label for="minority"><b>Choose Minority or Gender Emphasis</b></label><br>
+<i>HBCU and "Predominantly-Black Institutions" are NOT the same thing and in my testing showed two entirely-different sets of results.</i><br>
+<select name="minority" class="minority">
+<option value="0">Any</option>
+<option value="school.minority_serving.historically_black=1&">Historically Black College and Universities (HBCUs)</option>
+<option value="school.minority_serving.predominantly_black=1&">Predominantly-Black Institutions</option>
+<option value="school.minority_serving.annh=1&">Alaska Native Native Hawaiian serving institution</option>
+<option value="school.minority_serving.tribal=1&">Tribal College/University</option>
+<option value="school.minority_serving.aanipi=1&">Asian American Native American Pacific Islander serving institution</option>
+<option value="school.minority_serving.hispanic=1&">Hispanic-serving institution</option>
+<option value="school.minority_serving.nant=1&">Native American non-tribal institution</option>
+<option value="school.men_only=1&">Men-Only Institution</option>
+<option value="school.women_only=1&">Women-Only Institution</option>
+</select><br><br>
+
+<label for="religion"><b>Choose Religious Affiliation</b></label>
+<select name="religion" class="religion">
+<option value="0">Any </option>
+<option value="22">American Evangelical Lutheran Church</option>
+<option value="24">African Methodist Episcopal Zion Church</option>
+<option value="27">Assemblies of God Church</option>
+<option value="28">Brethren Church</option>
+<option value="30">Roman Catholic</option>
+<option value="33">Wisconsin Evangelical Lutheran Synod</option>
+<option value="34">Christ and Missionary Alliance Church</option>
+<option value="35">Christian Reformed Church</option>
+<option value="36">Evangelical Congregational Church</option>
+<option value="37">Evangelical Covenant Church of America</option>
+<option value="38">Evangelical Free Church of America</option>
+<option value="39">Evangelical Lutheran Church</option>
+<option value="40">International United Pentecostal Church</option>
+<option value="41">Free Will Baptist Church</option>
+<option value="42">Interdenominational</option>
+<option value="43">Mennonite Brethren Church</option>
+<option value="44">Moravian Church</option>
+<option value="45">North American Baptist</option>
+<option value="47">Pentecostal Holiness Church</option>
+<option value="48">Christian Churches and Churches of Christ</option>
+<option value="49">Reformed Church in America</option>
+<option value="50">Episcopal Church, Reformed</option>
+<option value="51">African Methodist Episcopal</option>
+<option value="52">American Baptist</option>
+<option value="53">American Lutheran</option>
+<option value="54">Baptist</option>
+<option value="55">Christian Methodist Episcopal</option>
+<option value="57">Church of God</option>
+<option value="58">Church of Brethren</option>
+<option value="59">Church of the Nazarene</option>
+<option value="60">Cumberland Presbyterian</option>
+<option value="61">Christian Church (Disciples of Christ)</option>
+<option value="64">Free Methodist</option>
+<option value="65">Friends</option>
+<option value="66">Presbyterian Church (USA)</option>
+<option value="67">Lutheran Church in America</option>
+<option value="68">Lutheran Church - Missouri Synod</option>
+<option value="69">Mennonite Church</option>
+<option value="71">United Methodist</option>
+<option value="73">Protestant Episcopal</option>
+<option value="74">Churches of Christ</option>
+<option value="75">Southern Baptist</option>
+<option value="76">United Church of Christ</option>
+<option value="77">Protestant, not specified</option>
+<option value="78">Multiple Protestant Denomination</option>
+<option value="79">Other Protestant</option>
+<option value="80">Jewish</option>
+<option value="81">Reformed Presbyterian Church</option>
+<option value="84">United Brethren Church</option>
+<option value="87">Missionary Church Inc</option>
+<option value="88">Undenominational</option>
+<option value="89">Wesleyan</option>
+<option value="91">Greek Orthodox</option>
+<option value="92">Russian Orthodox</option>
+<option value="93">Unitarian Universalist</option>
+<option value="94">Latter Day Saints (Mormon Church)</option>
+<option value="95">Seventh Day Adventists</option>
+<option value="97">The Presbyterian Church in America</option>
+<option value="99">Other (none of the above)</option>
+<option value="100">Original Free Will Baptist</option>
+<option value="101">Ecumenical Christian</option>
+<option value="102">Evangelical Christian</option>
+<option value="103">Presbyterian</option>
+<option value="105">General Baptist</option>
+<option value="106">Muslim</option>
+</select><br><br>
+
+
+<label><b>Data.gov API Key:</b></label>  <input type="text" class="apikey" size="20" value=""><br><br>
+  <i>You'll need a Data.gov API Key to use this tool. You can get them free from <a href="https://api.data.gov/signup/">https://api.data.gov/signup/</a> .</i><br><br>
+ 
+
+<button onclick="superedusearch()">Search Edu Space</button><br><br>
+
+
+
+
+					</main>
+					
+						<nav id="sidebar">
+						<div class="widget">
+							<h3>Gizmo Categories</h3>
+
+							<ul>
+							<li><a href="https://researchbuzz.github.io/Google.html">Google Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/Twitter.html">Twitter Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/News.html">News Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/Blog.html">Blog Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/Name.html">Name Search Tools</a></li>
+<li><a href="https://researchbuzz.github.io/OSINT.html">Search with OSINT Data</a></li>
+<li><a href="https://researchbuzz.github.io/notGithub.html">Random Gizmos Not on GitHub</a></li>
+
+
+							</ul>
+
+<br><br><a href="https://researchbuzz.github.io/">RB Search Gizmos Home</a><br><br>
+						</div>
+					</nav>
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+		
+			<div id="footerblurb">
+				<div id="footerblurb-inner">
+				
+					<div class="column">
+						<h2><span>What Is This?</span></h2>
+						<p>The RB Gizmos are a collection of search tools made with JavaScript and HTML.</p>
+					</div>	
+					<div class="column">
+						<h2><span>Why Is This?</span></h2>
+						<p>Because I've been writing about searching and search engines since 1996 and I'm obsessed with them.</p>
+					</div>
+					<div class="column">
+						<h2> </h2>
+						<p><script> </script></p>
+					</div>	
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+			<footer id="footer">
+				<div id="footer-inner">
+					
+					<div class="clr"></div>
+				</div>
+			</footer>
+
+
+
+		</div>
+
+
+
+
+   <script>
+
+function superedusearch(){
+
+// Getting values from form 
+
+    var searchq = document.querySelector(".searchq").value
+    var ownership = document.querySelector(".ownership").value
+    ownership = Number(ownership) 
+    var minority = document.querySelector(".minority").value
+    var religion = document.querySelector(".religion").value 
+    religion = Number(religion) 
+    var zip = document.querySelector(".zip").value
+    zip = Number(zip) 
+    var searchradius = document.querySelector(".searchradius").value
+    searchradius = Number(searchradius)
+    var apikey = document.querySelector(".apikey").value
+  
+
+
+// Checking to make sure there's an API key
+
+	 if (apikey == null || apikey == "") {
+         alert("Please enter a Data.gov API key. This tool won't work without one.");
+         return false;
+      }
+
+
+// Base URL for queries
+ 
+var api_url = "https://api.data.gov/ed/collegescorecard/v1/schools.json?school.operating=1&fields=school.name,school.city,school.state,school.school_url&api_key="+apikey+"&per_page=100&"
+
+
+
+api_url = api_url+"&zip="+zip+"&"
+
+api_url = api_url+"&distance="+searchradius+"&"
+
+// Adding in ownership parameter if user specified
+
+if (ownership == 0){
+}
+else {api_url = api_url+"school.ownership="+ownership+"&"}
+
+// Adding in minority parameter if user specified
+
+if (minority == 0){
+}
+else {api_url = api_url+minority}
+
+// Adding in religious parameter if user specified
+
+if (religion == 0){
+}
+else {api_url = api_url+"school.religious_affiliation="+religion+"&"}
+
+
+
+// Base URL to get count
+
+console.log(api_url)
+
+var api_url2 = api_url+"&per_page=1"
+
+let uninames =[]
+let unicities =[]
+let unistates =[]
+let uniurls =[]
+
+fetch(api_url,{
+  mode: 'cors',
+ })
+   .then(function(response){
+        return response.json()
+   })
+    .then (function(res){
+      mapdata=res
+    var resultcount = mapdata.metadata.total
+
+ if (resultcount == 0) {
+         alert("Your set of search parameters found no results. Please try again with a more general search.");
+         return false;
+      }
+
+
+if (resultcount > 200) {
+         alert("Your search is returning more than 200 results. Please narrow it down.");
+         return false;
+      }
+
+
+
+if (resultcount < 100) {
+
+let loopcounter = 0
+let looptotal = mapdata.results.length
+while (loopcounter < looptotal){
+
+let uniname = mapdata.results[loopcounter]
+var schooln = uniname['school.name']
+var schoolc = uniname['school.city']
+var schools = uniname['school.state']
+var schoolu = uniname['school.school_url']
+console.log(schoolu)
+
+// Turning the random and decidedly NON-STANDARD urls into domain names. 
+
+if (schoolu){
+var schoolu = schoolu.replace("http://", "");
+var schoolu = schoolu.replace("https://", "");
+var schoolu = schoolu.split('/')[0];
+let urlelements = schoolu.split(".")
+var lastone = urlelements.length-1
+var nextlastone = urlelements.length-2
+var domainname ="site:"+urlelements[nextlastone]+"."+urlelements[lastone]
+
+}
+else {var schoolu = "No Web Site"}
+
+// pushing everything into its proper array 
+
+uninames.push(schooln)
+unicities.push(schoolc)
+unistates.push(schools)
+uniurls.push(domainname)
+
+loopcounter++
+}
+
+ }
+else { 
+
+
+let loopcounter = 0
+let looptotal = mapdata.results.length
+while (loopcounter < looptotal){
+
+let uniname = mapdata.results[loopcounter]
+var schooln = uniname['school.name']
+var schoolc = uniname['school.city']
+var schools = uniname['school.state']
+var schoolu = uniname['school.school_url']
+
+// Turning the random and decidedly NON-STANDARD urls into domain names. 
+
+if (schoolu){
+var schoolu = schoolu.replace("http://", "");
+var schoolu = schoolu.replace("https://", "");
+var schoolu = schoolu.split('/')[0];
+let urlelements = schoolu.split(".")
+var lastone = urlelements.length-1
+var nextlastone = urlelements.length-2
+var domainname ="site:"+urlelements[nextlastone]+"."+urlelements[lastone]
+
+}
+else {var schoolu = "No Web Site"}
+
+// pushing everything into its proper array 
+
+uninames.push(schooln)
+unicities.push(schoolc)
+unistates.push(schools)
+uniurls.push(domainname)
+
+loopcounter++
+}
+
+
+api_url2 = api_url+"page=1"
+let page2 = {}
+
+fetch(api_url2,)
+   .then(function(response){
+        return response.json()
+   })
+    .then (function(res){
+      page2=res
+   console.log("page2",page2)
+
+loopstart = 0
+looptotal = page2.results.length
+
+while (loopstart < looptotal){
+
+let uninamepg2 = page2.results[loopstart]
+var schooln2 = uninamepg2['school.name']
+var schoolc2 = uninamepg2['school.city']
+var schools2 = uninamepg2['school.state']
+var schoolu2 = uninamepg2['school.school_url']
+
+// Turning the random and decidedly NON-STANDARD urls into domain names. 
+
+if (schoolu2 != null){
+
+var schoolu2 = schoolu2.replace("http://", "");
+var schoolu2 = schoolu2.replace("https://", "");
+var schoolu2 = schoolu2.split('/')[0];
+let urlelements2 = schoolu2.split(".")
+var lastone2 = urlelements2.length-1
+var nextlastone2 = urlelements2.length-2
+var domainname2 ="site:"+urlelements2[nextlastone2]+"."+urlelements2[lastone2]
+}
+else {var schoolu2 = "No Web Site"}
+
+// pushing everything into its proper array 
+
+uninames.push(schooln2)
+unicities.push(schoolc2)
+unistates.push(schools2)
+uniurls.push(domainname2)
+
+loopstart++
+}
+
+
+
+
+
+
+})
+
+}
+const Bitems = uniurls 
+
+const n = 15 
+
+const result = new Array(Math.ceil(Bitems.length / n))
+  .fill()
+  .map(_ => Bitems.splice(0, n))
+  resultlength = result.length
+   resultstart = 0
+var Bdiv = document.getElementById("results")
+Bdiv.innerHTML = "<h4>.Edu Search For Your Parameters</h4>"  
+while (resultstart < resultlength) {
+var BitemsString = result[resultstart]
+var BitemsURL = BitemsString.join(" | ")
+var BitemsURL = "("+BitemsURL+")"
+ 
+var displayURL = "https://www.google.com/search?tbs=li:1&q="+searchq+"+"
+var QueryURL = displayURL+BitemsURL
+QueryURL = encodeURI(QueryURL)
+var resultsm = resultstart+1
+var BitemsQ =  QueryURL
+var BitemsQCount = "University space search for "+searchq+" - Results group #"+resultsm+"  (click to open) <br>"
+var BitemsQ = "<a href=\""+BitemsQ+"\" target=\"_blank\">"+BitemsQCount+"</a>"
+Bdiv.innerHTML = Bdiv.innerHTML + BitemsQ + "<br><br>"
+
+resultstart++
+}
+
+
+
+
+
+
+
+
+
+})
+
+}
+
+
+   </script>
+</body>
+</html>
